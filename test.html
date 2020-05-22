@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+//			var bigArr=[
+//				{id:1,name:"aa"},
+//				{id:2,name:"bb"},
+//				{id:3,name:"cc"},
+//				{id:4,name:"dd"},
+//				{id:5,name:"ee"},
+//				{id:6,name:"ff"},
+//				{id:7,name:"gg"},
+//			]
+//			var smallArr=[
+//				{id:3,name:"kk"},
+//				{id:1,name:"hh"},
+//				{id:5,name:"oo"},
+//				{id:8,name:"mm"}
+//			]
+			var boxArr=[
+				{
+					id:1,
+					bigArr:[
+						{id:1,name:"aa"},
+						{id:2,name:"bb"},
+						{id:3,name:"cc"},
+						{id:4,name:"dd"},
+						{id:5,name:"ee"},
+						{id:6,name:"ff"},
+						{id:7,name:"gg"},
+					],
+					smallArr:[
+						{id:3,name:"kk"},
+						{id:1,name:"hh"},
+						{id:5,name:"oo"},
+						{id:8,name:"mm"}
+					]
+				},
+				{
+					id:2,
+					bigArr:[
+						{id:11,name:"ww"},
+						{id:12,name:"qq"},
+						{id:13,name:"ee"},
+						{id:14,name:"rr"},
+						{id:15,name:"tt"},
+					],
+					smallArr:[
+						{id:15,name:"tt"},
+						{id:13,name:"ee"},
+					]
+				}
+			]
+			
+			for(var k=0;k<boxArr.length;k++){
+				for(var i=0;i<boxArr[k].bigArr.length;i++){
+					for(var j=0;j<boxArr[k].smallArr.length;j++){
+						if(boxArr[k].bigArr[i].id == boxArr[k].smallArr[j].id){
+							boxArr[k].bigArr[i].check=true;
+							console.log(boxArr[k].bigArr[i])
+							break
+						}else{
+							boxArr[k].bigArr[i].check=false;
+						}
+					}
+				}
+			}
+			console.log(boxArr);
+			
+
+		</script>
+	</body>
+</html>
